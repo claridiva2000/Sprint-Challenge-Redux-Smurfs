@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Smurf from '../components/Smurf';
+// import { addSmurf } from '../actions';
 
-function SmurfsList() {
+
+const SmurfsList= props => {
   return (
     <div>
-      <h1>SmurfsList Works!</h1>
+       {props.smurfs.map((smurf, id) => (
+            <Smurf key={id} smurf={smurf} />
+          ))}
     </div>
   )
 }
